@@ -1,0 +1,575 @@
+/* Center content both vertically and horizontally */
+.top-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 2rem;
+}
+
+/* Buttons */
+.register-button,
+.connect-button,
+.record-sale-form .submit-button,
+.post-produce-form .submit-button,
+.profile-form .submit-button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.register-button:hover,
+.connect-button:hover,
+.record-sale-form .submit-button:hover,
+.post-produce-form .submit-button:hover,
+.profile-form .submit-button:hover {
+  background-color: #16a085;
+}
+
+.register-button:disabled {
+  background-color: #90e0d0;
+  cursor: not-allowed;
+}
+
+/* Error and Success Messages */
+.error-message,
+.success-message {
+  animation: fadeIn 0.5s;
+}
+
+.error-message {
+  color: red;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Farmer Dashboard Layout */
+.dashboard-container {
+  width: 1000px;
+  display: flex;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+.sidebar {
+  width: 210px;
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: none;
+  padding: 1rem 0;
+  flex-direction: column;
+  box-shadow: none;
+  background: #1abc9c;
+  color: #fff;
+  display: flex;
+  align-items: stretch;
+  padding: 2rem 0;
+  box-shadow: 2px 0 8px rgba(44, 62, 80, 0.07);
+}
+
+.dashboard-tabs {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0 20px 20px 0;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background: #16a085;
+  font-weight: bold;
+}
+
+.navbar {
+  width: 1000px;
+  background: #fff;
+  padding: 1.5rem 2rem 1rem;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.welcome-message {
+  font-size: 1.1rem;
+  color: #16a085;
+  margin-bottom: 0.5rem;
+}
+
+.user-info {
+  background: #f2f2f2;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+/* Cards and Sections */
+.card-section,
+.my-produce-listings,
+.post-produce-form,
+.profile-form,
+.dashboard-overview {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+}
+
+.card-section,
+.my-produce-listings {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.record-sale-form,
+.post-produce-form,
+.profile-form {
+  max-width: 400px;
+  min-width: 300px;
+  padding: 1.2rem;
+  margin: 1.2rem 0;
+  width: 1000px;
+}
+
+.record-sale-form,
+.profile-form {
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.track-stock,
+.sales-history,
+.my-produce-listings {
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  width: 1040px;
+  max-width: 1050px;
+}
+
+.record-sale-form h3,
+.my-produce-listings h3,
+.post-produce-form h3,
+.profile-form h3,
+.dashboard-overview h3 {
+  color: #2c3e50;
+  margin-bottom: 1.2rem;
+}
+
+.my-produce-listings table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  background: #fff;
+}
+
+.my-produce-listings th,
+.my-produce-listings td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.my-produce-listings th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.my-produce-listings tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.my-produce-listings tr:hover {
+  background-color: #e6f7ff;
+  cursor: pointer;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 0.1rem;
+  font-size: 0.97rem;
+}
+
+input,
+select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.97rem;
+  background: #f9f9f9;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: #1abc9c;
+  outline: none;
+}
+
+/* Overview & Stats */
+.dashboard-overview {
+  padding: 1rem 1.2rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.05);
+}
+
+.dashboard-overview p {
+  margin-bottom: 0.2rem;
+  font-size: 0.97rem;
+}
+
+.dashboard-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+
+.stat-card {
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 0.7rem 1.1rem;
+  box-shadow: 0 1px 2px rgba(44, 62, 80, 0.04);
+  min-width: 90px;
+  text-align: center;
+}
+
+.stat-card h4 {
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 4px;
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background: #f2f2f2;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.pagination button.active,
+.pagination button:hover {
+  background: #1abc9c;
+  color: #fff;
+  border-color: #1abc9c;
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1abc9c;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 1s linear infinite;
+  margin: 1em auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  
+  .dashboard-tabs {
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+  .tab-button {
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-section,
+  .user-info,
+  .post-produce-form,
+  .dashboard-overview {
+    padding: 1rem;
+  }
+  .navbar {
+    padding: 0.5rem;
+  }
+  .dashboard-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .stat-card {
+    padding: 0.5rem 0.7rem;
+    min-width: 70px;
+  }
+}
+
+.content {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.track-stock {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+}
+
+.track-stock table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.track-stock th,
+.track-stock td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.track-stock th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.track-stock .low-stock {
+  background-color: #fff3f3;
+}
+
+.stock-alert {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.stock-normal {
+  color: #27ae60;
+}
+
+.update-stock-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.update-stock-btn:hover {
+  background-color: #2980b9;
+}
+
+.analytics-reports {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+}
+
+.analytics-summary {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.analytics-card {
+  flex: 1;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.analytics-card h4 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.analytics-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.best-selling table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.best-selling th,
+.best-selling td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.best-selling th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.blockchain-ledger {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+}
+
+.ledger-info {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ledger-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.blockchain-ledger table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.blockchain-ledger th,
+.blockchain-ledger td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.blockchain-ledger th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.dashboard-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 200px;
+}
+
+.tab-button {
+  width: 200px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #1abc9c;
+  color: white;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tab-button.active {
+  background-color: #16a085;
+}
+
+.tab-button:hover {
+  background-color: #16a085;
+}
+
+@media (max-width: 600px) {
+  .dashboard-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  .tab-button {
+    flex: 1 1 auto;
+    margin: 0.2rem;
+  }
+}
+
+.sales-history table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.sales-history th,
+.sales-history td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.sales-history th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.sales-history tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.sales-history tbody tr:hover {
+  background-color: #f1f1f1;
+}

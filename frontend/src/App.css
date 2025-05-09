@@ -1,0 +1,71 @@
+/* Center content both vertically and horizontally */
+.top-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* move content to top */
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 2rem;
+}
+
+/* Fieldset wrapper */
+.fieldset {
+  border: 2px solid #ccc;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fieldset legend */
+.fieldset legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  color: #2c3e50;
+}
+
+/* Input field style */
+.FarmerRegister {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.register-button,
+.connect-button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: auto;
+}
+
+.register-button:hover,
+.connect-button:hover {
+  background-color: #16a085;
+}
+
+.register-button:disabled {
+  background-color: #90e0d0;
+  cursor: not-allowed;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
